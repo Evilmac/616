@@ -1,0 +1,19 @@
+import PyPDF2
+
+def leer_pdf(ruta_pdf):
+    with open(ruta_pdf, "rb") as f:
+        lector = PyPDF2.PdfReader(f)
+        texto = ""
+
+        for pagina in lector.pages:
+            contenido = pagina.extract_text()
+            if contenido:
+                texto += contenido + "\n"
+
+    return texto
+
+# Ejemplo de uso:
+if __name__ == "__main__":
+    archivo = "archivo.pdf"  # Cambia esto por tu PDF
+    resultado = leer_pdf(archivo)
+    print(resultado)

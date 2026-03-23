@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "ia_offline_asistente",
+			"path": "."
+		}
+	],
+	"settings": {
+		"python.defaultInterpreterPath": "${workspaceFolder}/venv311/Scripts/python.exe"
+	}
+}
